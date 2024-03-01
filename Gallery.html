@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <style>
+    body{
+      font-size: 28px;
+      font-family: blink;
+      margin:0;
+    }
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+      top: 0;
+    }
+    .navbar ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    .navbar li {
+      float: left;
+      border-right: 1px solid #bbb;
+    }
+    .navbar li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .navbar li a:hover {
+      background-color: #bab686;
+      color: #111;
+      transition: 0.15s;
+    }
+    .navbar li a.active {
+      background-color: #bab686;
+      color: #111;
+    }
+    ul{
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      background-color:#333 ;
+      overflow: hidden;
+    }
+    li {
+      float:left;
+      border-right: 1px solid #bbb;
+
+    }
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    li a:hover{
+      background-color: #bab686;
+      color: #111;
+      transition: 0.15s;
+    }
+    li a:hover:not(.active){
+      background-color: #bab686;
+    }
+    .active{
+      background-color: #bab686;
+      color: #111;
+    }
+    .logo{
+      background-color: rgb(148, 145, 141);
+      margin-top: -5px;
+      display: block;
+    }
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 20px;
+      }
+      .gallery img {
+        width: 300px;
+        height: 200px; 
+        object-fit: cover; 
+        margin-bottom: 10px;
+      }
+      .slideshow-container {
+        max-width: 800px; 
+        margin: 0 auto; 
+        overflow: hidden; 
+        position: relative; 
+      }
+      .slideshow-slides {
+        display: flex; 
+        animation: slide show 4s infinite; 
+      }
+      .slideshow-slides img {
+        width: 100%; 
+        height: auto; 
+      }
+      @keyframes slide {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-100%); } 
+      }
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto; 
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        background-color: rgba(0, 0, 0, 0.8); 
+      }
+      .prev:hover, .next:hover {
+        background-color: rgba(0, 0, 0, 0.5); 
+      }
+      .prev {
+        left: 0; 
+      }
+      .next {
+        right: 0; 
+      }
+      .body1{
+        background-color: rgb(160, 190, 180);
+      }
+      h2,p,.slideshow-container{
+        text-align: center;
+      }
+      .footer{
+        text-align: center;
+            padding:3px;
+            background-color: rgb(148, 145, 141);
+          
+      }
+  </style>
+
+</head>
+<div class="body1">
+<body>
+  <div class="logo">
+    <img src="images/mazda-usa-logo.png">
+  </div>
+  <div class="navbar">
+  <ul>
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="Internal-features.html">Internal Features</a></li>
+    <li><a href="External-features.html">External Features</a></li>
+    <li><a class="active" href="Gallery.html">Gallery</a></li>
+    <li><a href="Contacts.html">Contacts</a></li>
+  </ul>
+  </div>
+  <div style="text-align:center">
+    
+  <h2>Gallery</h2>
+
+</div>
+<div class="slideshow-container">
+  <div class="slideshow-slides">
+    <img src="images\rossover-suv.jpg" alt="Mazda CX-5 rossover" style="height:100%;width:100%">
+    <img src="images\suv-off-road.jpg" alt="Mazda CX-5 Driving" style="height:100%;width:100%">
+    <img src="images\interior compact-suv.jpg" alt="Mazda CX-5 Interior" style="height:100%;width:100%">
+    <img src="images\external.jpeg" alt="Mazda CX-5 Exterior" style="height:100%;width:100%">
+    <img src="images\img3.jpeg" alt="Mazda CX-5 Action Shot" style="height:100%;width:100%">
+    <img src="images\soundproof.jpg" alt="Mazda CX-5 soundproof" style="height:100%;width:100%">
+
+  </div>
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function showSlides(n) {
+    let slides = document.getElementsByClassName("slideshow-slides")[0];
+    if (n > slides.children.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.children.length}
+    slides.style.transform = `translateX(-${(slideIndex - 1) * 100}%)`;
+  }
+</script>
+<p>
+  The new Mazda CX-5 impresses from every angle. Its flowing exterior lines and refined details express athletic elegance.
+  The thoughtfully designed interior provides comfort and quality throughout.
+</p>
+<div class="footer">
+  <p>
+    © 2024 Mazda Motor Corporation. All rights reserved.
+  </p>
+</div>
+</body>
+</div>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <style>
+    body {
+      font-size: 28px;
+      font-family: blink;
+      margin: 0; /* Remove default margin */
+    }
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+      position: -webkit-sticky; /* Safari */
+      position: sticky;
+      top: 0;
+    }
+    .navbar ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    .navbar li {
+      float: left;
+      border-right: 1px solid #bbb;
+    }
+    .navbar li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .navbar li a:hover {
+      background-color: #bab686;
+      color: #111;
+      transition: 0.15s;
+    }
+    .navbar li a.active {
+      background-color: #bab686;
+      color: #111;
+    }
+    .logo {
+      background-color: rgb(148, 145, 141);
+      margin-top: -5px;
+      display: block;
+    }
+    .scroll-container {
+      background-color: #333;
+      overflow: auto;
+      white-space: nowrap;
+      padding: 10px;
+    }
+    .features-container {
+      text-align: center;  
+      list-style-position: inside;  
+    }
+    .btn:hover {
+      background-color: rgb(148, 145, 141);
+      color: #111;
+      transition: 0.15s;
+    }
+    .body1 {
+      background-color: rgb(160, 190, 180);
+    }
+    .footer {
+      text-align: center;
+      padding: 3px;
+      background-color: rgb(148, 145, 141);
+    }
+    ol li{
+      float:none;
+      list-style-type:circle;
+      
+      display:table-cell;
+      border-right:none;
+      
+          }
+          .key{
+            color:chocolate;
+            text-decoration-line:underline;
+            text-decoration-color: #111;
+            text-decoration-line: wavy;
+            }
+  </style>
+</head>
+<body class="body1">
+
+<div class="logo">
+  <img src="images/mazda-usa-logo.png">
+</div>
+
+<div class="navbar">
+  <ul>
+    <li><a class="active" href="Home.html">Home</a></li>
+    <li><a href="Internal-features.html">Internal Features</a></li>
+    <li><a href="External-features.html">External Features</a></li>
+    <li><a href="Gallery.html">Gallery</a></li>
+    <li><a href="Contacts.html">Contacts</a></li>
+  </ul>
+</div>
+
+<div style="text-align:center">
+  <h1>Introducing the New Mazda CX-5</h1>
+</div>
+
+<div class="scroll-container">
+  <img src="images/suv-off-road.jpg" width="800" height="400">
+  <img src="images/rossover-suv.jpg" width="800" height="400">
+  <img src="images/exterir-suv-side-panel.jpg" width="800" height="400">
+</div>
+
+<p style="text-align: center;">
+  Experience the new Mazda CX-5 with its refined styling, responsive performance, and latest safety and technology features.
+</p>
+
+<div class="features-container" style="text-align: center;">
+  <h2 class="key">Key Features</h2>
+  <ol>
+    <li>&star;Sleek exterior design</li>
+    <li>&star;Spacious and luxurious interior</li>
+    <li>&star;Powerful SKYACTIV engines</li>
+    <li>&star;i-ACTIV all-wheel drive</li>
+    <li>&star;Advanced safety technologies</li>
+    <li>&star;Intuitive infotainment system</li>
+  </ol>
+</div>
+
+<div style="text-align: center;">
+  <a href="https://www.caranddriver.com/mazda/cx-5" class="btn" target="_blank">Learn More About the CX-5</a>
+  <p>Starting at <span style="color:chocolate;">$24,625</span> MSRP*</p>
+  <p>&star;Price does <strong>not</strong> include <span style="color:chocolate">tax</span>, <span style="color:chocolate">title</span>,<span style="color:chocolate">licence fees</span> and <span style="color:chocolate">options</span>.<br>
+  &star;Dealer sets actual price.</p>
+</div>
+
+<div class="footer">
+  <p>© 2024 Mazda Motor Corporation. All rights reserved.</p>
+</div>
+
+</body>
+</html>
